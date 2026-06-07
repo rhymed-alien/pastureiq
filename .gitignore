@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Project-specific
+data/raw/weather/*.json
+data/raw/satellite/*
+*.sqlite
+*.db
+.env
+venv/
+.venv/

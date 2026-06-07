@@ -1,0 +1,23 @@
+# Core (install now / Day 2)
+pandas
+numpy
+requests
+matplotlib
+python-dotenv
+
+# Weather API helpers
+openmeteo-requests
+requests-cache
+retry-requests
+
+# Dashboard
+streamlit
+
+# Modelling — install when you reach Mini-project 2
+scikit-learn
+xgboost
+
+# Forecasting + AI — install when you reach Mini-project 3
+# (prophet can be fiddly on Windows; install it later, not now)
+# prophet
+anthropic
