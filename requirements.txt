@@ -20,4 +20,4 @@ xgboost
 # Forecasting + AI — install when you reach Mini-project 3
 # (prophet can be fiddly on Windows; install it later, not now)
 # prophet
-anthropic
+# anthropic

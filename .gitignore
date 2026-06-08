@@ -219,7 +219,6 @@ __marimo__/
 
 
 # Project-specific
-data/raw/weather/*.json
 data/raw/satellite/*
 *.sqlite
 *.db

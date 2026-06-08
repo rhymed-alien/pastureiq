@@ -27,8 +27,7 @@ REGIONS = {
 WEATHER_START_DATE = "2015-01-01"
 WEATHER_VARIABLES = [
     "temperature_2m_max", "temperature_2m_min", "precipitation_sum",
-    "et0_fao_evapotranspiration", "soil_moisture_0_to_7cm",
-    "soil_temperature_0cm", "windspeed_10m_max",
+    "et0_fao_evapotranspiration", "windspeed_10m_max",
 ]
 
 # --- Pasture pressure thresholds (tune as you learn) ---
