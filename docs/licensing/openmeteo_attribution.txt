@@ -1,0 +1,2 @@
+Weather data from Open-Meteo.com (CC BY 4.0)
+  - NOTE: free Open-Meteo API = non-commercial use only; the DATA is CC BY 4.0. Record both.

@@ -1,0 +1,6 @@
+terrain_type,min_su_per_ha,max_su_per_ha,notes
+hard_hill,2,7,B+LNZ farm class benchmark; verified range
+steep_hill,6,10,B+LNZ farm class benchmark; verified range
+easier_hill,7,13,B+LNZ farm class benchmark; verified range
+high_country,,3,B+LNZ farm class benchmark; verified upper bound only (<=3); no lower bound given
+lifestyle_flat,4.5,15.5,"RESOLVED (2026-07-16). Auckland Council TR2017/020 (Hicks & Curran-Cournane, 2017) Appendix 2, averaged across sandstone + mudstone/shale geology (Waitemata Group - matches the Kumeu/Waimauku/Muriwai lifestyle-block belt), regolithic footslope landform (LUC4). Min=un-improved (4.5 SU/ha), max=improved (15.5 SU/ha), semi-improved midpoint=9.0 SU/ha - same three-tier structure the source gives, unlike the single-point B+LNZ ranges above. Confirm this landform/geology choice against real site data if West Auckland farmer contacts (per project notes) can validate; this is a reasoned match, not a site inspection."

@@ -225,3 +225,6 @@ data/raw/satellite/*
 .env
 venv/
 .venv/
+
+#Sweetviz report 
+sweetviz_*.html

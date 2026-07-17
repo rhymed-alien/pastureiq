@@ -1,0 +1,19 @@
+animal_class,category,stock_units,cattle_equivalent,source_note
+ewe,sheep,1.0,,B+LNZ Sheep & Beef Farm Survey standard
+hogget,sheep,0.7,,B+LNZ Sheep & Beef Farm Survey standard
+wether,sheep,0.7,,B+LNZ Sheep & Beef Farm Survey standard
+ram,sheep,0.8,,B+LNZ Sheep & Beef Farm Survey standard
+grazing_sheep,sheep,0.7,,From 2009-10 Survey onward
+ma_cow,beef,5.5,1.0,Mature-age cow; B+LNZ survey standard
+heifer_2.5yr,beef,5.5,1.0,B+LNZ survey standard
+heifer_1.5yr,beef,4.5,0.8,B+LNZ survey standard
+heifer_weaner,beef,3.5,0.6,B+LNZ survey standard
+bull_weaner,beef,4.5,0.8,B+LNZ survey standard
+steer_weaner,beef,4.5,0.8,B+LNZ survey standard
+steer_1.5yr,beef,5.0,0.9,B+LNZ survey standard
+steer_2.5yr,beef,5.5,1.0,B+LNZ survey standard
+bull_beef_1.5yr_plus,beef,5.5,1.0,B+LNZ survey standard
+bull_breeding,beef,5.5,1.0,B+LNZ survey standard
+r2_dairy_heifer,dairy,4.5,0.8,B+LNZ survey standard
+r1_dairy_heifer,dairy,3.5,,B+LNZ survey standard
+dairy_cow_winter,dairy,1.1,,Winter grazing basis; B+LNZ survey standard

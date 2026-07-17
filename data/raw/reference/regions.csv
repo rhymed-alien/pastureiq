@@ -1,0 +1,8 @@
+**NOTE on source of truth:** config.py holds the region coords the CODE runs on.
+    regions.csv is the richer REFERENCE file (rainfall, sunshine, farm class) for analysis +
+    documentation. Keep them consistent; config.py wins if they ever differ.
+  - **Columns:** region_id, name, label, lat, lon, terrain_type, avg_annual_rainfall_mm,
+    avg_sunshine_hours, blnz_farm_class, notes
+  - **Region 1:** South Waikato / King Country — lat: -38.34, lon: 175.16 (Te Kūiti area)
+  - **Region 2:** South Taranaki / N. Whanganui hill country — lat: -39.63, lon: 174.93
+  - **Region 3:** West Auckland lifestyle blocks — lat: -36.90, lon: 174.52
