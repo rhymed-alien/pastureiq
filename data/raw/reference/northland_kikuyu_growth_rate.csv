@@ -1,0 +1,46 @@
+# Sources: 'Beef Profit from Pasture Group: Technical Summary 2' (2017) and
+# 'Grazing rotation length on kikuyu grass pastures in autumn and winter'.
+"# Retrieved from agyields.co.nz dashboard, 2026-07-17."
+"# Region: Northland - NOT one of the three target regions, but kikuyu is the"
+"# dominant pasture species on lowland West Auckland lifestyle blocks, so this"
+"# is a real, species-matched shape-proxy candidate for West_Auckland - a"
+# meaningfully better-reasoned proxy than the fabricated 'Waikato dairy Ruakura
+# curve' it would replace (different species entirely: ryegrass/clover vs
+"# kikuyu, which has a markedly different, more summer-active growth pattern)."
+"# Still a proxy: different region (Northland, not Auckland), not yet adopted."
+
+site_pub_year,start_date,end_date,growth_rate_kgdm_ha_day,source_file
+,16/05/2016,11/06/2016,95.3846,196
+,16/08/2016,13/09/2016,52.6786,196
+,15/04/2016,16/05/2016,96.7742,196
+,23/07/2016,16/08/2016,62,196
+,13/09/2016,22/10/2016,42.3077,196
+,11/06/2016,23/07/2016,40.4762,196
+,16/05/2016,11/06/2016,107.6923,196
+,16/08/2016,13/09/2016,60,196
+,15/04/2016,16/05/2016,100,196
+,23/07/2016,16/08/2016,73.75,196
+,13/09/2016,22/10/2016,48.7179,196
+,11/06/2016,23/07/2016,47.619,196
+1987,23/08/1983,05/10/1983,28.3721,228
+1987,15/03/1983,23/08/1983,6.7081,228
+1987,23/08/1983,05/10/1983,36.0465,228
+1987,15/03/1983,23/08/1983,10.8075,228
+1987,23/08/1983,05/10/1983,28.7,228
+1987,15/03/1983,23/08/1983,24.9,228
+1987,26/04/1984,07/08/1984,17.9612,228
+1987,30/08/1984,12/10/1984,35.5814,228
+1987,26/04/1984,07/08/1984,20.9,228
+1987,30/08/1984,12/10/1984,20.1,228
+1987,26/04/1984,07/08/1984,20.0971,228
+1987,30/08/1984,12/10/1984,34.186,228
+1987,26/04/1984,07/08/1984,26,228
+1987,30/08/1984,12/10/1984,32.7,228
+1987,09/04/1982,13/08/1982,13.6508,228
+1987,13/08/1982,15/10/1982,16.0317,228
+1987,09/04/1982,13/08/1982,21.4,228
+1987,13/08/1982,15/10/1982,13.9,228
+1987,09/04/1982,13/08/1982,20.3175,228
+1987,13/08/1982,15/10/1982,20.3175,228
+1987,09/04/1982,13/08/1982,16.7,228
+1987,13/08/1982,15/10/1982,21.4,228

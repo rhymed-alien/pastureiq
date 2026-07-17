@@ -1,0 +1,23 @@
+"# Source: Lopez, I.F., Lambert, M.G., Mackay, A.D. & Valentine, I. (2003)."
+# 'The influence of topography and pasture management on soil characteristics
+# and herbage accumulation in hill pasture in the North Island of New Zealand.'
+"# Retrieved from agyields.co.nz dashboard, 2026-07-17."
+"# Ballantrae Research Station, Whanganui-Manawatu - real sheep-grazed hill"
+"# country data. NOT Taranaki itself (Manawatu, adjacent), single year"
+"# (Jul 1997 - Jul 1998), annual totals only across 11 slope/fertility/"
+# stocking-rate treatments - no monthly resolution.
+# Use as a secondary sanity check on DTT Stratford's dairy-farm figures
+"# against genuine hill-country sheep numbers, not as a primary source."
+
+site_name,start_date,end_date,dm_yield_kgdm_ha,growth_rate_kgdm_ha_day,defoliation_method,description_notes
+Ballantrae Research Station,01/07/1997,01/07/1998,10285,28.1781,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"
+Ballantrae Research Station,01/07/1997,01/07/1998,5578,15.2822,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"
+Ballantrae Research Station,01/07/1997,01/07/1998,17226,47.1945,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"
+Ballantrae Research Station,01/07/1997,01/07/1998,11324,31.0247,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"
+Ballantrae Research Station,01/07/1997,01/07/1998,4003,10.9671,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"
+Ballantrae Research Station,01/07/1997,01/07/1998,4280,11.726,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"
+Ballantrae Research Station,01/07/1997,01/07/1998,2872,7.8685,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"
+Ballantrae Research Station,01/07/1997,01/07/1998,9170,25.1233,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"
+Ballantrae Research Station,01/07/1997,01/07/1998,2976,8.1534,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"
+Ballantrae Research Station,01/07/1997,01/07/1998,12568,34.4329,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"
+Ballantrae Research Station,01/07/1997,01/07/1998,5806,15.9068,Grazed by ewes,"The purpose of this study was to investigate the long-term effects of soil physical and chemical properties, herbage buildup, and livestock management"

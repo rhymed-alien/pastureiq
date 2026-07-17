@@ -6,6 +6,63 @@ version notes already in those two files — nothing added beyond what's documen
 
 ---
 
+## pasture_growth_curve.csv — West Auckland shape upgraded from placeholder to real (2026-07-17)
+
+- Replaced West Auckland's flat 12-way-split placeholder with a combined real shape:
+  Welsford (Auckland region, Rodney District, 2002-2003) for Jan-Mar/Oct-Dec, Northland
+  kikuyu (2016, "196" dataset only) for Jun-Jul, both sources averaged for the
+  Apr/May/Aug/Sep overlap. Every month now has at least one real source — no months
+  guessed or interpolated.
+- A related kikuyu dataset ("228," grazing rotation length study, 1982-84) was
+  investigated and explicitly excluded: its date ranges span 4-5 months per row, so
+  bucketing it by start-month (as an earlier pass in this session did) mixed
+  multi-month rotation-treatment values into single-month buckets — not valid monthly
+  data. Caught before being wired into the CSV.
+- Rescaled onto TR2017/020's 6900 kg DM/ha/yr magnitude (unchanged, already real).
+  Reconstructed annual total from the rescaled monthly values checked against the target
+  (6900 both ways).
+- Caveat carried into the CSV itself: Welsford (2002-03) and kikuyu (2016) are ~14 years
+  apart — flagged as a magnitude-comparability risk, lower risk for the seasonal shape
+  actually used, and moot regardless since TR2017/020 remains the magnitude anchor.
+- Full detail: `DATA_SOURCES.md`, Pasture Growth section.
+- Waikato and Taranaki unchanged in this pass.
+
+## pasture_growth_curve.csv — Waikato shape upgraded from placeholder to real (2026-07-17)
+
+- Replaced Waikato's flat 12-way-split placeholder with a real monthly shape: "Pasture
+  Plan growth rate 2002-2003 (King Country)," agyields.co.nz, Paddock Flat + Paddock Oat.
+  Rescaled onto Cichota et al. (2014)'s 8493 kg DM/ha/yr magnitude (more robust, 30-year
+  simulated figure) via `rescale_shape_to_magnitude()` in `build_pasture_growth_curve.py`.
+  Reconstructed annual total from the rescaled monthly values checked against the target
+  (8493 both ways).
+- Caveat carried into the CSV itself, not just this log: the King Country source is a
+  single season (2002-2003), two paddocks — real, but not multi-year-verified. Flagged
+  in the `shape_confidence` column.
+- Full detail: `DATA_SOURCES.md`, Pasture Growth section.
+- Taranaki and Auckland unchanged in this pass.
+
+## Pasture growth sourcing — fabrication found and corrected (2026-07-17)
+
+- A past session's `pasture_growth_curve.csv` cited "DairyNZ Ruakura/Newstead" and
+  "DairyNZ Hawera WTARS" as the monthly-shape sources for Waikato, West Auckland, and
+  Taranaki. Neither document exists anywhere in this project. The Taranaki entries
+  additionally claimed to be "cross-confirmed against DairyNZ Facts and Figures PDF" — a
+  verification that never happened. Confirmed by checking every uploaded/held document
+  against these claims: no match.
+- Real replacements sourced and verified against source PDFs/CSVs the same day:
+  - Taranaki: DTT Stratford (Dairy Trust Taranaki), 10 years of real monthly data via
+    agyields.co.nz — now the primary Taranaki source, magnitude and shape both.
+  - West Auckland: Cichota (2014)/TR2017-derived magnitude unchanged (already real);
+    Northland kikuyu data (agyields.co.nz) proposed as a real, species-matched shape
+    proxy, replacing the fabricated Waikato-dairy-shape borrow. Adoption pending decision.
+  - Waikato: Cichota (2014) Table 2 unchanged as primary (already real, re-verified);
+    Reardon (1978) Te Kuiti/Whatawhata beef data added as an independent secondary
+    cross-check.
+  - Two more real secondary cross-checks added for the Taranaki/Whanganui region:
+    Ballantrae (López et al. 2003) and Fielding "Pasture Plan" 2002–2003.
+- Full detail: `DATA_SOURCES.md`, Pasture Growth section. `pasture_growth_curve.csv`
+  itself still needs rebuilding on this corrected basis — not done as part of this entry.
+
 ## FORMULAS.md v1.5 — streamlined to a pure functional reference (2026-07-17)
 
 - Removed the "CORRECTIONS LOGGED" narrative block and the closing meta-lesson

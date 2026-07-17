@@ -1,0 +1,81 @@
+# Source: 'Pasture Plan growth rate 2002-2003 (Fielding)'.
+"# Retrieved from agyields.co.nz dashboard, 2026-07-17."
+"# Sites: Deightons, Kowhais - Whanganui-Manawatu region, near Fielding."
+"# Real measured data, roughly monthly intervals (24-53 day spans), one season"
+# only (2002-2003). Grazing type/species not specified in source metadata.
+"# Secondary cross-check for the Taranaki/Whanganui region, not primary -"
+"# geographically adjacent (Manawatu, not Taranaki), single season."
+
+site_name,start_date,end_date,growth_rate_kgdm_ha_day
+Deightons,02/09/2002,02/10/2002,25
+Deightons,02/09/2002,02/10/2002,47
+Deightons,01/04/2003,01/05/2003,22
+Deightons,03/08/2002,02/09/2002,31
+Deightons,06/01/2003,03/02/2003,14
+Deightons,01/05/2003,03/06/2003,23
+Deightons,04/11/2002,03/12/2002,58
+Deightons,02/10/2002,04/11/2002,80
+Deightons,03/12/2002,06/01/2003,81
+Deightons,17/09/2002,14/10/2002,35
+Deightons,19/05/2003,16/06/2003,49
+Deightons,17/11/2002,16/12/2002,61
+Deightons,19/08/2002,17/09/2002,13
+Deightons,14/10/2002,17/11/2002,48
+Deightons,15/06/2002,18/07/2002,22
+Deightons,14/04/2003,19/05/2003,42
+Deightons,15/07/2002,19/08/2002,32
+Deightons,16/12/2002,17/01/2003,26
+Deightons,16/12/2002,17/01/2003,22
+Deightons,01/04/2003,01/05/2003,22
+Deightons,03/08/2002,02/09/2002,26
+Deightons,06/01/2003,03/02/2003,20
+Deightons,01/05/2003,03/06/2003,24
+Deightons,04/11/2002,03/12/2002,63
+Deightons,02/10/2002,04/11/2002,98
+Deightons,03/12/2002,06/01/2003,61
+Deightons,17/09/2002,14/10/2002,33
+Deightons,19/05/2003,16/06/2003,38
+Deightons,17/11/2002,16/12/2002,64
+Deightons,19/08/2002,17/09/2002,32
+Deightons,14/10/2002,17/11/2002,60
+Deightons,15/06/2002,18/07/2002,36
+Deightons,14/04/2003,19/05/2003,34
+Deightons,15/07/2002,19/08/2002,34
+Kowhais,02/09/2002,02/10/2002,35
+Kowhais,02/09/2002,02/10/2002,26
+Kowhais,17/02/2003,01/05/2003,16
+Kowhais,01/05/2003,03/06/2003,2
+Kowhais,16/12/2002,17/01/2003,53
+Kowhais,17/01/2003,17/02/2003,46
+Kowhais,03/08/2002,02/09/2002,24
+Kowhais,06/01/2003,03/02/2003,38
+Kowhais,04/11/2002,03/12/2002,64
+Kowhais,02/10/2002,04/11/2002,49
+Kowhais,03/12/2002,06/01/2003,85
+Kowhais,03/02/2003,14/04/2003,23
+Kowhais,17/09/2002,14/10/2002,42
+Kowhais,19/05/2003,16/06/2003,14
+Kowhais,17/11/2002,16/12/2002,74
+Kowhais,19/08/2002,17/09/2002,16
+Kowhais,14/10/2002,17/11/2002,71
+Kowhais,15/06/2002,18/07/2002,14
+Kowhais,14/04/2003,19/05/2003,13
+Kowhais,15/07/2002,19/08/2002,10
+Kowhais,03/08/2002,02/09/2002,18
+Kowhais,06/01/2003,03/02/2003,54
+Kowhais,04/11/2002,03/12/2002,76
+Kowhais,02/10/2002,04/11/2002,62
+Kowhais,03/12/2002,06/01/2003,86
+Kowhais,03/02/2003,14/04/2003,23
+Kowhais,17/09/2002,14/10/2002,45
+Kowhais,19/05/2003,16/06/2003,26
+Kowhais,17/11/2002,16/12/2002,60
+Kowhais,19/08/2002,17/09/2002,20
+Kowhais,14/10/2002,17/11/2002,49
+Kowhais,15/06/2002,18/07/2002,15
+Kowhais,14/04/2003,19/05/2003,11
+Kowhais,15/07/2002,19/08/2002,18
+Kowhais,17/02/2003,01/05/2003,20
+Kowhais,01/05/2003,03/06/2003,7
+Kowhais,16/12/2002,17/01/2003,52
+Kowhais,17/01/2003,17/02/2003,53

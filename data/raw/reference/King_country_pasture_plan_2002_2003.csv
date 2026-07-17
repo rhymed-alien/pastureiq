@@ -1,0 +1,92 @@
+# Source: 'Pasture Plan growth rate 2002-2003 (King Country)'.
+"# Retrieved from agyields.co.nz dashboard, 2026-07-17."
+"# Sites: Paddock Flat, Paddock Oat - Waikato region, King Country -"
+# same name as South_Waikato_King_Country target region. Real measured
+"# data, roughly-monthly intervals, one season (2002-2003)."
+# 3 exact duplicate rows removed on dedup (Site Name + Start/End Date +
+# Growth Rate match) - 77 unique rows kept from 80 raw.
+# This is the real shape rescaled onto Cichota et al. (2014)'s 8493
+# kg DM/ha/yr magnitude in pasture_growth_curve.csv - see that file's
+# generator script for the rescale math.
+
+site_name,start_date,end_date,growth_rate_kgdm_ha_day
+Paddock Flat,30/05/2002,01/07/2002,7
+Paddock Flat,01/07/2002,01/08/2002,5
+Paddock Flat,01/08/2002,01/09/2002,20
+Paddock Flat,01/09/2002,01/10/2002,38
+Paddock Flat,03/11/2002,01/12/2002,84
+Paddock Flat,03/03/2003,02/04/2003,16
+Paddock Flat,05/02/2003,03/03/2003,16
+Paddock Flat,01/10/2002,03/11/2002,35
+Paddock Flat,01/12/2002,05/01/2003,52
+Paddock Flat,30/05/2002,01/07/2002,7
+Paddock Flat,01/07/2002,01/08/2002,5
+Paddock Flat,01/08/2002,01/09/2002,24
+Paddock Flat,01/09/2002,01/10/2002,45
+Paddock Flat,03/11/2002,01/12/2002,93
+Paddock Flat,03/03/2003,02/04/2003,8
+Paddock Flat,05/02/2003,03/03/2003,13
+Paddock Flat,01/10/2002,03/11/2002,34
+Paddock Flat,01/12/2002,05/01/2003,71
+Paddock Flat,14/06/2002,14/07/2002,4
+Paddock Flat,15/09/2002,14/10/2002,32
+Paddock Flat,15/12/2002,15/01/2003,40
+Paddock Flat,17/03/2003,15/04/2003,4
+Paddock Flat,19/08/2002,15/09/2002,40
+Paddock Flat,18/11/2002,15/12/2002,58
+Paddock Flat,15/04/2003,16/06/2003,18
+Paddock Flat,15/01/2003,17/02/2003,34
+Paddock Flat,17/02/2003,17/03/2003,7
+Paddock Flat,14/10/2002,18/11/2002,44
+Paddock Flat,14/07/2002,19/08/2002,8
+Paddock Flat,14/06/2002,14/07/2002,10
+Paddock Flat,15/09/2002,14/10/2002,34
+Paddock Flat,15/12/2002,15/01/2003,43
+Paddock Flat,17/03/2003,15/04/2003,2
+Paddock Flat,19/08/2002,15/09/2002,37
+Paddock Flat,18/11/2002,15/12/2002,71
+Paddock Flat,15/04/2003,16/06/2003,19
+Paddock Flat,15/01/2003,17/02/2003,29
+Paddock Flat,17/02/2003,17/03/2003,7
+Paddock Flat,14/10/2002,18/11/2002,71
+Paddock Flat,14/07/2002,19/08/2002,10
+Paddock Oat,30/05/2002,01/07/2002,12
+Paddock Oat,01/07/2002,01/08/2002,15
+Paddock Oat,01/08/2002,01/09/2002,40
+Paddock Oat,01/09/2002,01/10/2002,54
+Paddock Oat,03/11/2002,01/12/2002,78
+Paddock Oat,03/03/2003,02/04/2003,10
+Paddock Oat,05/02/2003,03/03/2003,15
+Paddock Oat,01/10/2002,03/11/2002,54
+Paddock Oat,01/12/2002,05/01/2003,64
+Paddock Oat,30/05/2002,01/07/2002,8
+Paddock Oat,01/07/2002,01/08/2002,11
+Paddock Oat,01/08/2002,01/09/2002,33
+Paddock Oat,01/09/2002,01/10/2002,66
+Paddock Oat,03/11/2002,01/12/2002,67
+Paddock Oat,03/03/2003,02/04/2003,9
+Paddock Oat,05/02/2003,03/03/2003,13
+Paddock Oat,01/10/2002,03/11/2002,41
+Paddock Oat,01/12/2002,05/01/2003,113
+Paddock Oat,14/06/2002,14/07/2002,5
+Paddock Oat,15/09/2002,14/10/2002,54
+Paddock Oat,15/12/2002,15/01/2003,82
+Paddock Oat,17/03/2003,15/04/2003,12
+Paddock Oat,19/08/2002,15/09/2002,48
+Paddock Oat,18/11/2002,15/12/2002,68
+Paddock Oat,15/04/2003,16/06/2003,31
+Paddock Oat,15/01/2003,17/02/2003,28
+Paddock Oat,17/02/2003,17/03/2003,15
+Paddock Oat,14/10/2002,18/11/2002,66
+Paddock Oat,14/07/2002,19/08/2002,14
+Paddock Oat,14/06/2002,14/07/2002,6
+Paddock Oat,15/09/2002,14/10/2002,98
+Paddock Oat,15/12/2002,15/01/2003,69
+Paddock Oat,17/03/2003,15/04/2003,13
+Paddock Oat,19/08/2002,15/09/2002,47
+Paddock Oat,18/11/2002,15/12/2002,88
+Paddock Oat,15/04/2003,16/06/2003,30
+Paddock Oat,15/01/2003,17/02/2003,35
+Paddock Oat,17/02/2003,17/03/2003,22
+Paddock Oat,14/10/2002,18/11/2002,75
+Paddock Oat,14/07/2002,19/08/2002,11

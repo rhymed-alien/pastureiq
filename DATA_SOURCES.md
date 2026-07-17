@@ -79,29 +79,138 @@ identified, not yet requested · **DEAD END** = investigated, not usable.
 
 ## Pasture Growth
 
-**Cichota et al. (2014) — APSIM sheep/beef simulation (Waikato)**
-- Decision supported: Waikato pasture growth curve annual magnitude (8493 kg DM/ha/yr,
-  LUC Class 6 steep hill)
-- Status: **LIVE** — figure applied in `pasture_growth_curve.csv`, scale factor 0.4819.
+**⚠ FABRICATION FLAG (found and corrected 2026-07-17):** the two entries previously here,
+"DairyNZ Ruakura/Newstead (1996–2017 avg)" and "DairyNZ Hawera WTARS," did not exist. No
+such documents are held anywhere in this project. A past session invented them, including
+a false "cross-confirmed against DairyNZ Facts and Figures PDF" claim for the Taranaki
+values. Both entries are removed below and replaced with what's real. If
+`pasture_growth_curve.csv` in the repo still cites either name, it needs rebuilding — see
+FORMULAS.md Group B.
+
+**Cichota et al. (2014) — APSIM sheep/beef simulation (Waikato/Canterbury/Southland)**
+- Full citation: `CITATIONS.md`
+- Source file (transcribed & verified against PDF 2026-07-17):
+  `data/raw/reference/pasture_growth_sources/cichota_2014_table2_luc_dmy.csv`
+- Variables: annual DMY by region × LUC class (2/4/6), plus expert-estimated DMI
+  (potential/top farmer/average farmer) for cross-check
+- Decision supported: Waikato pasture growth curve annual magnitude — 8493 kg DM/ha/yr,
+  LUC Class 6 (steep hill), confirmed exact match to source Table 2
+- ⚠ Monthly *shape* for this region is NOT in this source as a data table — Figure 2 in
+  the paper is a chart, not printed numbers. Digitizing it remains an open task (see
+  FORMULAS.md Named Gaps). Shape now comes from a different real source — see King
+  Country entry below.
+- Status: **LIVE** — magnitude figure applied in `pasture_growth_curve.csv`.
+
+**"Pasture Plan growth rate 2002-2003" (King Country) — real shape for Waikato**
+- Retrieved from agyields.co.nz dashboard, 2026-07-17. Raw data (80 rows, 3 exact
+  duplicates flagged not removed, for transparency):
+  `data/raw/reference/pasture_growth_sources/agyields_raw/196-657-download-17Jul2026.csv`
+- Cleaned/deduped source file (77 unique rows):
+  `data/raw/reference/pasture_growth_sources/king_country_pasture_plan_2002_2003.csv`
+- Sites: Paddock Flat, Paddock Oat — Waikato region, King Country specifically, same
+  name as the South_Waikato_King_Country target region and a tighter geographic match
+  than Cichota's pooled Pukekohe/Ruakura/Whatawhata sites.
+- Decision supported: **replaces Waikato's flat placeholder shape.** Real monthly-shape
+  data, rescaled onto Cichota's 8493 kg DM/ha/yr magnitude (rescale math in
+  `build_pasture_growth_curve.py`, `rescale_shape_to_magnitude()`). This source's own
+  implied annual total (~11,868 kg DM/ha/yr, single season) is not used directly —
+  Cichota's 30-year simulated magnitude is more robust, so only the *shape* (relative
+  month-to-month pattern) is borrowed and rescaled.
+- ⚠ Single season (2002–2003), two paddocks. A real upgrade from the flat placeholder,
+  not a multi-year-verified curve — flag this if precision matters downstream.
+- Status: **LIVE** — shape applied, rescaled, in `pasture_growth_curve.csv`.
 
 **Auckland Council TR2017/020 (Hicks & Curran-Cournane, 2017), Appendix 2**
-- Decision supported: West Auckland pasture growth curve annual magnitude (6900 kg
-  DM/ha/yr) and `lifestyle_flat` carrying capacity (4.5–15.5 SU/ha)
-- Status: **LIVE** — both figures applied.
+- Full citation: `CITATIONS.md`
+- Source file (transcribed 2026-07-17, all 207 appendix rows, not just the 2 used):
+  `data/raw/reference/pasture_growth_sources/tr2017_020_appendix2_pasture_yields.csv`
+- Variables: pasture growth (un-improved/semi-improved/improved, t DM/ha/yr) and stocking
+  rate (SU/ha) by geology × landform × LUC class, for all of Auckland region
+- Decision supported: West Auckland annual magnitude (6900 kg DM/ha/yr) = average of the
+  "regolithic footslopes" semi-improved rows for "banded or massive sandstone" (6.3 t/ha)
+  and "claystone, mudstone, shale" (7.5 t/ha); `lifestyle_flat` carrying capacity (9.0
+  SU/ha) = average of the same two rows' semi-improved stocking rate (8 and 10 SU/ha)
+- ⚠ No monthly shape data in this source either — confirmed by full-text search, this
+  report cites Cichota's method rather than providing its own seasonal curve. Shape now
+  comes from a different real source — see combined Welsford+kikuyu entry below.
+- Status: **LIVE** — magnitude and carrying capacity verified against the full extracted
+  table; remains the magnitude anchor (shape borrowed elsewhere, not this source).
 
-**DairyNZ Ruakura/Newstead (1996–2017 avg)**
-- Decision supported: monthly *shape* (not magnitude) for Waikato and West Auckland
-  pasture growth curves — a dairy-farm proxy, explicitly flagged as unresolved
-- Status: **LIVE**, flagged as proxy — revisit if sheep/beef monthly-resolution data is
-  ever found.
+**Welsford (Auckland) + Northland kikuyu, combined — real shape for West Auckland**
+- Welsford raw: `data/raw/reference/pasture_growth_sources/agyields_raw/Pasture_Plan_growth_rate_2002_2003__Welsford_.csv`
+  (Auckland region, Rodney District, 2002-2003, sites Lower Yards + Woolshed)
+- Kikuyu raw (196 dataset only): `data/raw/reference/pasture_growth_sources/agyields_raw/196-download-17Jul2026.csv`
+  (Northland, 2016, "Beef Profit from Pasture Group: Technical Summary 2")
+- Combined/cleaned: `data/raw/reference/pasture_growth_sources/west_auckland_combined_shape_welsford_kikuyu.csv`
+- Decision supported: **replaces West Auckland's flat placeholder shape.** Welsford covers
+  Jan–May and Aug–Dec (real, same region as the target, but ~70km north of West Auckland
+  and different local geology to TR2017/020's regolithic footslopes). Kikuyu-196 covers
+  Apr–Sep (real, species-matched to West Auckland's dominant lifestyle-block pasture, but
+  wrong region — Northland). Combined, every month has at least one real source; the
+  Apr/May/Aug/Sep overlap is averaged between the two rather than picked arbitrarily.
+- ⚠ A related dataset ("228" — grazing rotation length on kikuyu, 1982-84) was
+  **excluded**: its date ranges span 4-5 months per row (a rotation-length experiment,
+  not seasonal measurement) and are not usable as monthly data. Do not re-include it
+  without re-deriving true monthly rates from the underlying trial design.
+- ⚠ Welsford (2002-03) and kikuyu (2016) are ~14 years apart. Flagged as mainly a
+  magnitude-comparability risk (fertiliser/cultivar practice may have shifted) — lower
+  risk for the seasonal shape itself, and moot in any case since magnitude is anchored to
+  TR2017/020, not to either of these sources.
+- Status: **LIVE** — shape applied, rescaled onto TR2017/020's 6900 kg DM/ha/yr, in
+  `pasture_growth_curve.csv`.
 
-**DairyNZ Hawera WTARS**
-- Decision supported: Taranaki pasture growth curve, both shape and magnitude
-- Status: **LIVE**, flagged as full proxy — no sheep/beef-specific Taranaki source found.
+**DTT Stratford (Dairy Trust Taranaki) — real monthly pasture growth, Taranaki**
+- Retrieved from agyields.co.nz dashboard, 2026-07-17. Raw data:
+  `data/raw/reference/pasture_growth_sources/agyields_raw/640-download-17Jul2026.csv`
+  (130 rows, ~monthly intervals, 2015–2025). Aggregated to clean monthly means:
+  `data/raw/reference/pasture_growth_sources/dtt_stratford_taranaki_monthly_growth.csv`
+- Original source: https://www.dairytrusttaranaki.co.nz/wp-content/ (full URL in raw file)
+- Decision supported: **replaces the fabricated Taranaki entry.** This is now Taranaki's
+  primary magnitude AND shape source — 10 years of real monthly data, spring peak ~68–70
+  kg DM/ha/day (Sep–Oct), winter trough ~12.6 (June).
+- ⚠ DTT = Dairy Trust Taranaki — this is a dairy research site, so a dairy-proxy caveat
+  still applies to grazing type. The difference from the fabricated version: this is a
+  real, dated, Taranaki-specific, publicly-sourced dataset, not an invented citation.
+- Status: **LIVE** — real data, replaces prior fabrication. Not yet wired into
+  `pasture_growth_curve.csv` (pending rebuild).
 
-**Taranaki DTT Stratford**
-- Decision supported: candidate for a genuinely trained (non-proxy) Taranaki model
-- Status: **PLANNED** — flagged in appendix, MP3 candidate, not yet investigated.
+**Reardon (1978) — beef pasture, Te Kuiti & Whatawhata, Waikato**
+- Retrieved from agyields.co.nz, 2026-07-17:
+  `data/raw/reference/pasture_growth_sources/reardon_1978_waikato_beef_crosscheck.csv`
+- 4 rows, annual, 1971/1974. Both sites are inside the South_Waikato_King_Country region
+  boundary (Te Kuiti is the region's anchor town).
+- Decision supported: independent, genuinely beef-specific cross-check on Cichota's
+  Waikato magnitude. Too sparse (n=4, 50 years old) to replace Cichota as primary — use
+  as a footnoted sanity check only.
+- Status: **LIVE**, secondary/cross-check use only.
+
+**Ballantrae Research Station (López et al., 2003) — sheep hill country, Whanganui-Manawatu**
+- Retrieved from agyields.co.nz, 2026-07-17:
+  `data/raw/reference/pasture_growth_sources/ballantrae_whanganui_manawatu_hillcountry.csv`
+- 11 rows, annual only, one year (Jul 1997–Jul 1998), 11 slope/fertility/stocking
+  treatments. Real sheep-grazed hill country, Whanganui-Manawatu — adjacent to but not
+  the same as the Taranaki/N. Whanganui target region.
+- Decision supported: secondary sanity check on DTT Stratford's dairy-farm-derived
+  Taranaki figures against genuine hill-country sheep numbers. Not primary — wrong
+  sub-region, single year, no monthly resolution.
+- Status: **LIVE**, secondary/cross-check use only.
+
+**Fielding "Pasture Plan" 2002–2003 — Deightons & Kowhais, Whanganui-Manawatu**
+- Retrieved from agyields.co.nz, 2026-07-17:
+  `data/raw/reference/pasture_growth_sources/fielding_manawatu_pasture_plan_2002_2003.csv`
+- 72 rows, roughly-monthly intervals (24–53 day spans), one season only. Grazing
+  type/species not specified in source metadata.
+- Decision supported: another Manawatu-region secondary cross-check, same caveats as
+  Ballantrae above.
+- Status: **LIVE**, secondary/cross-check use only.
+
+- Status: **LIVE**, secondary/cross-check use only.
+
+**Note:** `northland_kikuyu_growth_rate.csv` (34 rows, both the "196" and the excluded
+"228" datasets) was the original scouting file for the kikuyu shape idea. It's superseded
+by the combined Welsford+kikuyu entry above, which uses only the valid "196" subset and
+is the version actually wired into `pasture_growth_curve.csv`. Kept on disk for
+provenance, not a live source in its own right.
 
 ---
 

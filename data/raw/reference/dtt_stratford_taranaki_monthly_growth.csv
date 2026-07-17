@@ -1,0 +1,26 @@
+"# Source: Dairy Trust Taranaki, DTT Stratford site."
+# 'DTT Stratford Monthly Pasture Growth (Kg DM/ha/day) - Past 11 Years'
+"# Retrieved from agyields.co.nz dashboard, 2026-07-17."
+# https://www.dairytrusttaranaki.co.nz/wp-content/ (see original CSV for full URL)
+"# Raw data: 130 rows, ~monthly intervals (28-31 days), 2015-2025, real measured"
+"# pasture growth rate at a dairy research farm in Stratford, Taranaki."
+"# NOTE: DTT = Dairy Trust Taranaki - this is a dairy research site, so the"
+"# dairy-proxy caveat still applies to grazing type. BUT it is real, dated,"
+# Taranaki-specific data - not a fabricated citation like the prior
+# 'Hawera WTARS' entry it replaces.
+"# This file: mean +/- range of Growth Rate (kg DM/ha/day) by calendar month,"
+# aggregated across all available years for that month.
+
+calendar_month,n_years,mean_growth_rate_kgdm_ha_day,min_kgdm_ha_day,max_kgdm_ha_day
+1,10,43.1,22.0,57.0
+2,10,42.2,35.0,54.0
+3,10,44.5,39.0,58.0
+4,10,30.4,25.0,36.0
+5,10,16.8,10.0,23.0
+6,10,12.6,8.0,21.0
+7,10,23.4,17.0,34.0
+8,10,51.3,43.0,58.0
+9,10,69.8,60.0,81.0
+10,10,68.3,55.0,77.0
+11,10,59.2,49.0,76.0
+12,10,46.8,26.0,56.0

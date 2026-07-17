@@ -1,0 +1,220 @@
+"# Source: Hicks, D. & Curran-Cournane, F. (2017). Auckland Council Technical"
+"# Report TR2017/020, Appendix 2: Pasture yields and stocking rates for Auckland"
+"# farm-scale land use capability (checked version, Feb 2017)."
+"# Transcribed via layout-aware text parsing from the source PDF, 2026-07-17,"
+# spot-checked against the two rows already used in pasture_growth_curve.csv.
+"# Yields in tonnes DM/ha/yr at 1500mm mean annual rainfall (model output, for"
+# cross-LUC comparison — not a site-specific rainfall figure).
+"# The West_Auckland row in pasture_growth_curve.csv (6900 kg DM/ha/yr, 9.0 SU/ha)"
+# is the average of the 'regolithic footslopes' semi-improved rows for
+"# 'banded or massive sandstone' (6.3 t, 8 SU/ha) and 'claystone, mudstone, shale'"
+"# (7.5 t, 10 SU/ha) below."
+
+section,geology,nzsc_soil_group,landform_characteristics,farm_luc_class,subclass,yield_suffix,pasture_growth_unimproved_tdm_ha_yr,pasture_growth_semiimproved_tdm_ha_yr,pasture_growth_improved_tdm_ha_yr,stocking_rate_unimproved_su_ha,stocking_rate_semiimproved_su_ha,stocking_rate_improved_su_ha
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS","estuary-margin mud, sand or shell",sulphuric raw,occasionally flooded,5,a,~,3.5,5.6,7.0,4,7,13
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS","estuary-margin mud, sand or shell",sulphuric raw,regularly flooded,6,a,~,2.6,4.2,5.3,3,6,10
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS","estuary-margin mud, sand or shell",sulphuric raw,frequently flooded,7,a,~,1.7,2.7,3.4,2,4,6
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS","estuary-margin mud, sand or shell",sandy raw,sandy or shelly,6,a+r,~,no data,no data,no data,no data,no data,no data
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS","floodway sand, silt or clay",gley or fluvial raw,occasionally flooded,5,f,@,3.2,5.0,6.3,3,7,11
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS","floodway sand, silt or clay",gley or fluvial raw,regularly flooded,6,f,@,2.3,3.7,4.6,2,5,8
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS","floodway sand, silt or clay",gley or fluvial raw,frequently flooded,7,f,@,1.5,2.4,3.0,2,3,5
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS",swamp peat,mesic or humic organic,semi-drained swamp,5,o,(,2.3,3.7,4.6,2,5,8
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS",swamp peat,mesic or humic organic,seasonal swamp,6,o,(,1.7,2.7,3.4,2,4,6
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS",swamp peat,mesic or humic organic,permanent swamp,7,o,(,1.1,1.7,2.1,1,2,4
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS",dune peat,sandy organic,semi-drained swamp,5,o,),2.9,4.6,5.8,3,6,10
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS",dune peat,sandy organic,seasonal swamp,6,o,),2.1,3.4,4.3,2,5,8
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS",dune peat,sandy organic,permanent swamp,7,o,),1.4,2.2,2.8,1,3,5
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS",streambank deposits,various soils,stable,5,b,,3.2,5.0,6.3,3,7,11
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS",streambank deposits,various soils,"unstable, moderate",6,b,,2.3,3.7,4.6,2,5,8
+"ESTUARIES, FLOODWAYS, SWAMPS, STREAMBANKS",streambank deposits,various soils,"unstable, steep",7,b,,1.5,2.4,3.0,2,3,5
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",estuarine alluvium,sulphuric gley,free-draining,2,a+e,~,6.0,9.5,11.9,6,13,22
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",estuarine alluvium,sulphuric gley,poorly drained,3,a+e,~,4.5,7.1,8.9,5,9,16
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",estuarine alluvium,sulphuric gley,seasonally wet,4,a+e,~,3.0,4.7,5.9,3,6,11
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",estuarine alluvium,sandy recent or orthic melanic,sandy or shelly,5,a+r,~,no data,no data,no data,no data,no data,no data
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",stream alluvium,fluvial recent or recent gley,free-draining,2,w+e,@,6.6,10.5,13.1,7,14,24
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",stream alluvium,fluvial recent or recent gley,poorly drained,3,w+e,@,5.3,8.4,10.5,6,11,19
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",stream alluvium,fluvial recent or recent gley,seasonally wet,4,w+e,@,4.0,6.3,7.9,4,8,14
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",peat or peaty alluvium,mesic or humic organic,free-draining,2,o+e,(,4.9,7.8,9.8,5,10,18
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",peat or peaty alluvium,mesic or humic organic,poorly drained,3,o+e,(,3.9,6.2,7.8,4,8,14
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",peat or peaty alluvium,mesic or humic organic,seasonally wet,4,o+e,(,2.9,4.6,5.8,3,6,10
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",sandy peat or peaty sand,sandy organic,free-draining,2,o+e,),6.0,9.6,12.0,6,13,22
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",sandy peat or peaty sand,sandy organic,poorly drained,3,o+e,),4.9,7.7,9.6,5,10,18
+"RECLAIMED FLATS, FLOODPLAINS, DRAINED SWAMPS",sandy peat or peaty sand,sandy organic,seasonally wet,4,o+e,),3.7,5.8,7.3,4,8,13
+LOW FLAT TERRACES,shallow stream alluvium,recent or orthic gley,free-draining,2,a,~,7.2,11.4,14.3,8,15,26
+LOW FLAT TERRACES,shallow stream alluvium,recent or orthic gley,poorly drained,3,a,~,5.4,8.6,10.8,6,11,20
+LOW FLAT TERRACES,shallow stream alluvium,recent or orthic gley,seasonally wet,4,a,~,3.7,5.8,7.3,4,8,13
+LOW FLAT TERRACES,shallow stream alluvium,"orthic brown, allophanic or granular",free-draining,2,w,@,7.8,12.4,15.5,8,17,28
+LOW FLAT TERRACES,shallow stream alluvium,"orthic brown, allophanic or granular",poorly drained,3,w,@,6.3,10.0,12.5,7,13,23
+LOW FLAT TERRACES,shallow stream alluvium,"orthic brown, allophanic or granular",seasonally wet,4,w,@,4.7,7.5,9.4,5,10,17
+LOW FLAT TERRACES,shallow peat,mesic or humic organic,free-draining,2,o,(,5.9,9.4,11.8,6,13,21
+LOW FLAT TERRACES,shallow peat,mesic or humic organic,poorly drained,3,o,(,4.7,7.4,9.3,5,10,17
+LOW FLAT TERRACES,shallow peat,mesic or humic organic,seasonally wet,4,o,(,3.5,5.6,7.0,4,7,13
+LOW FLAT TERRACES,sandy peat or peaty sand,sandy organic,free-draining,2,o,),7.3,11.6,14.5,8,15,26
+LOW FLAT TERRACES,sandy peat or peaty sand,sandy organic,poorly drained,3,o,),5.9,9.3,11.6,6,12,21
+LOW FLAT TERRACES,sandy peat or peaty sand,sandy organic,seasonally wet,4,o,),4.4,7.0,8.8,5,9,16
+LOW FLAT TERRACES,sandy peat or peaty sand,humus pan podsol,cemented pan,5,p,"""",2.8,4.4,5.5,3,6,10
+HIGH DISSECTED TERRACES,weathered alluvium,yellow ultic,"flat to undulating, free-draining",2,p,+,6.1,9.7,12.1,6,13,22
+HIGH DISSECTED TERRACES,weathered alluvium,yellow ultic,"flat to undulating, slow-draining",3,p,+,6.1,9.7,12.1,6,13,22
+HIGH DISSECTED TERRACES,weathered alluvium,yellow ultic,"rolling, free to slow-draining",3,p+t,+,5.2,8.2,10.3,5,11,19
+HIGH DISSECTED TERRACES,weathered alluvium,yellow ultic,"strongly rolling, free to slow-draining",4,p+t,+,4.7,7.5,9.4,5,10,17
+HIGH DISSECTED TERRACES,shallow waterlaid or airfall ash,orthic or impeded allophanic,flat to undulating,"1, 2",c,$,6.7,10.7,13.4,7,14,24
+HIGH DISSECTED TERRACES,shallow waterlaid or airfall ash,orthic or impeded allophanic,rolling,3,c+t,$,6.6,10.5,13.1,7,14,24
+HIGH DISSECTED TERRACES,shallow waterlaid or airfall ash,orthic or impeded allophanic,strongly rolling,4,c+t,$,6.4,10.1,12.6,7,13,23
+HIGH DISSECTED TERRACES,shallow waterlaid or airfall ash,orthic or impeded granular,flat to undulating,"1, 2",c,=,6.5,10.3,12.9,7,14,23
+HIGH DISSECTED TERRACES,shallow waterlaid or airfall ash,orthic or impeded granular,rolling,3,c+t,=,6.0,9.5,11.9,6,13,22
+HIGH DISSECTED TERRACES,shallow waterlaid or airfall ash,orthic or impeded granular,strongly rolling,4,c+t,=,5.7,9.0,11.3,6,12,20
+HIGH DISSECTED TERRACES,with seasonally impeded drainage,"perch-gley ultic, allophanic or granular",deep topsoil,3,p+w,',5.9,9.4,11.8,6,13,21
+HIGH DISSECTED TERRACES,with seasonally impeded drainage,"perch-gley ultic, allophanic or granular",shallow topsoil,4,p+w,',4.4,7.0,8.8,5,9,16
+HIGH DISSECTED TERRACES,with seasonally impeded drainage,albic or densipan ultic,deep topsoil,3,p,"""",5.5,8.7,10.9,6,12,20
+HIGH DISSECTED TERRACES,with seasonally impeded drainage,albic or densipan ultic,shallow topsoil,4,p,"""",4.1,6.5,8.1,4,9,15
+HIGH DISSECTED TERRACES,with seasonally impeded drainage,albic or densipan ultic,cemented pan,5,p,"""",2.8,4.4,5.5,3,6,10
+HIGH DISSECTED TERRACES,on terrace scarps and gullies,various soils,stable,5,b+g,,5.5,8.7,10.9,6,12,20
+HIGH DISSECTED TERRACES,on terrace scarps and gullies,various soils,"unstable, moderate",6,b+g,,4.4,7.0,8.8,5,9,16
+HIGH DISSECTED TERRACES,on terrace scarps and gullies,various soils,"unstable, steep",7,b+g,,4.2,6.6,8.3,4,9,15
+SAND DUNES,windblown sand (active or recent),sandy recent or sandy raw,"vegetated, undulating to rolling",5,d,%,4.8,7.6,9.5,5,10,17
+SAND DUNES,windblown sand (active or recent),sandy recent or sandy raw,"vegetated, strongly rolling",6,d,%,4.2,6.6,8.3,4,9,15
+SAND DUNES,windblown sand (active or recent),sandy recent or sandy raw,re-veg. or re-activating (inland),7,d,%,3.2,5.1,6.4,3,7,12
+SAND DUNES,windblown sand (old dunes),sandy or orthic brown,undulating to rolling,3,x+d,&,7.2,11.4,14.3,8,15,26
+SAND DUNES,windblown sand (old dunes),sandy or orthic brown,strongly rolling,4,x+d,&,6.7,10.7,13.4,7,14,24
+SAND DUNES,windblown sand (old dunes),sandy or orthic brown,"moderate, stable",5,x+s,&,6.5,10.3,12.9,7,14,23
+SAND DUNES,windblown sand (old dunes),sandy or orthic brown,"moderate, unstable",6,x+g,&,5.1,8.1,10.1,5,11,18
+SAND DUNES,windblown sand (old dunes),sandy or orthic brown,steep,7,x+l,&,3.0,4.7,5.9,3,6,11
+SAND DUNES,weathered sand (dissected dunes),orthic granular,"flat, ash-mantled",2,c+x,=,6.5,10.3,12.9,7,14,23
+SAND DUNES,weathered sand (dissected dunes),orthic granular,"undulating to rolling, ash-mantled",3,c+x,=,6.0,9.5,11.9,6,13,22
+SAND DUNES,weathered sand (dissected dunes),orthic granular,"strongly rolling, ash-mantled",4,c+x,=,5.7,9.0,11.3,6,12,20
+SAND DUNES,weathered sand (dissected dunes),sandy ultic,undulating to rolling,3,x+t,',4.7,7.4,9.3,5,10,17
+SAND DUNES,weathered sand (dissected dunes),sandy ultic,strongly rolling,4,x+t,',4.2,6.7,8.4,4,9,15
+SAND DUNES,weathered sand (dissected dunes),sandy ultic,"moderate, stable",5,x+s,',4.0,6.3,7.9,4,8,14
+SAND DUNES,weathered sand (dissected dunes),sandy ultic,"moderate, unstable",6,x+g,',3.1,4.9,6.1,3,7,11
+SAND DUNES,weathered sand (dissected dunes),sandy ultic,steep,7,x+l,',1.7,2.7,3.4,2,4,6
+SAND DUNES,weathered sand (dissected dunes),perch-gley ultic or densipan podsol,"uncemented pan, deep topsoil",3,p,"""",5.5,8.7,10.9,6,12,20
+SAND DUNES,weathered sand (dissected dunes),perch-gley ultic or densipan podsol,"uncemented pan, shallow topsoil",4,p,"""",4.1,6.5,8.1,4,9,15
+SAND DUNES,weathered sand (dissected dunes),perch-gley ultic or densipan podsol,"uncemented pan, on undulating slopes",3,p+t,"""",5.4,8.6,10.8,6,11,20
+SAND DUNES,weathered sand (dissected dunes),perch-gley ultic or densipan podsol,"uncemented pan, on rolling slopes",4,p+t,"""",4.0,6.4,8.0,4,9,15
+SAND DUNES,weathered sand (dissected dunes),perch-gley ultic or densipan podsol,cemented pan,5,p,"""",2.8,4.4,5.5,3,6,10
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",recent ash,tephric recent or raw,"shallow, loamy",5,r+s,!,4.5,7.1,8.9,5,9,16
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",recent ash,tephric recent or raw,"shallower, loamy",6,r+g,!,4.2,6.6,8.3,4,9,15
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",recent scoria & basalt,tephric recent or raw,"v. shallow, sandy to gritty",7,r+g,!,2.9,4.6,5.8,3,6,10
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered basalt & scoria,orthic allophanic or oxidic brown,"flat to rolling, shallow soil",3,r,!,6.4,10.2,12.8,7,14,23
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered basalt & scoria,orthic allophanic or oxidic brown,"flat to rolling, shallower",4,r,!,6.4,10.2,12.8,7,14,23
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered basalt & scoria,orthic allophanic or oxidic brown,"undulating to rolling, v. shallow",5,r,!,6.2,9.8,12.3,6,13,22
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered basalt & scoria,orthic allophanic or oxidic brown,"undulating to rolling, stones at surface",6,r,!,6.2,9.8,12.3,6,13,22
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered basalt & scoria,orthic allophanic or oxidic brown,"moderate, stable",5,r+s,!,4.5,7.1,8.9,5,9,16
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered basalt & scoria,orthic allophanic or oxidic brown,"moderate, unstable",6,r+g,!,4.2,6.6,8.3,4,9,15
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered basalt & scoria,orthic allophanic or oxidic brown,steep,7,r+g,!,2.9,4.6,5.8,3,6,10
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic allophanic,flat to undulating,1,1c,$,6.7,10.7,13.4,7,14,24
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic allophanic,undulating,2,2c,$,6.7,10.7,13.4,7,14,24
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic allophanic,rolling,3,3c+t,$,6.6,10.5,13.1,7,14,24
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic allophanic,strongly rolling,4,4c+t,$,6.4,10.1,12.6,7,13,23
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic allophanic,"moderate, stable",5,5c+s,$,5.6,8.9,11.1,6,12,20
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic allophanic,"moderate, unstable",6,6c+g,$,5.0,8.0,10.0,5,11,18
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic granular,flat to undulating,1,1c,=,6.5,10.3,12.9,7,14,23
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic granular,undulating,2,2c,=,6.5,10.3,12.9,7,14,23
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic granular,rolling,3,3c+t,=,6.0,9.5,11.9,6,13,22
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic granular,strongly rolling,4,4c+t,=,5.7,9.0,11.3,6,12,20
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic granular,"moderate, stable",5,5c+s,=,4.9,7.7,9.6,5,10,18
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",weathered ash,orthic granular,"moderate, unstable",6,6c+g,=,4.5,7.2,9.0,5,10,16
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",older ash on basalt or other rocks,oxidic brown or orthic oxidic,"undulating, with deep topsoil",3,p,',5.0,8.0,10.0,5,11,18
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",older ash on basalt or other rocks,oxidic brown or orthic oxidic,"undulating, with shallow topsoil",4,p,',3.8,6.0,7.5,4,8,14
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",older ash on basalt or other rocks,oxidic brown or orthic oxidic,"rolling, with deep topsoil",3,p+t,',4.9,7.8,9.8,5,10,18
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",older ash on basalt or other rocks,oxidic brown or orthic oxidic,"rolling, with shallow topsoil",4,p+t,',3.4,5.4,6.8,4,7,12
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",older ash on basalt or other rocks,oxidic brown or orthic oxidic,"moderate, stable",5,p+s,',4.6,7.3,9.1,5,10,17
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",older ash on basalt or other rocks,oxidic brown or orthic oxidic,"moderate, unstable",6,p+g,',4.3,6.8,8.5,5,9,15
+"LAVA FLOWS, SCORIA CONES & ASH-MANTLED DOWNLANDS",older ash on basalt or other rocks,"orthic, perch-gley or gley oxidic",iron pan,5,p,"""",2.5,4.0,5.0,3,5,9
+"FOOTSLOPES, SPURS AND RIDGES",any sedimentary rock type,perch-gley ultic or melanic,"undulating, with deep topsoil",3,p+w,',6.0,9.6,12.0,6,13,22
+"FOOTSLOPES, SPURS AND RIDGES",any sedimentary rock type,perch-gley ultic or melanic,"undulating, with shallow topsoil",4,p+w,',4.5,7.2,9.0,5,10,16
+"FOOTSLOPES, SPURS AND RIDGES",any sedimentary rock type,perch-gley ultic or melanic,"rolling, with deep topsoil",3,p+w,',5.9,9.3,11.6,6,12,21
+"FOOTSLOPES, SPURS AND RIDGES",any sedimentary rock type,perch-gley ultic or melanic,"rolling, with shallow topsoil",4,p+w,',4.4,7.0,8.8,5,9,16
+"FOOTSLOPES, SPURS AND RIDGES",any sedimentary rock type,albic ultic,"undulating, with deep topsoil",3,p,"""",5.6,8.9,11.1,6,12,20
+"FOOTSLOPES, SPURS AND RIDGES",any sedimentary rock type,albic ultic,"undulating, with shallow topsoil",4,p,"""",4.2,6.7,8.4,4,9,15
+"FOOTSLOPES, SPURS AND RIDGES",any sedimentary rock type,albic ultic,"rolling, with deep topsoil",3,p+t,"""",5.4,8.6,10.8,6,11,20
+"FOOTSLOPES, SPURS AND RIDGES",any sedimentary rock type,albic ultic,"rolling, with shallow topsoil",4,p+t,"""",4.0,6.4,8.0,4,9,15
+"FOOTSLOPES, SPURS AND RIDGES",any sedimentary rock type,densipan ultic,cemented pan,5,p,"""",2.8,4.4,5.5,3,6,10
+"FOOTSLOPES, SPURS AND RIDGES",any volcanic rock type,perch-gley or oxidic granular,"undulating, with deep topsoil",3,p,"""",5.0,8.0,10.0,5,11,18
+"FOOTSLOPES, SPURS AND RIDGES",any volcanic rock type,perch-gley or oxidic granular,"undulating, with shallow topsoil",4,p,"""",3.8,6.0,7.5,4,8,14
+"FOOTSLOPES, SPURS AND RIDGES",any volcanic rock type,perch-gley or oxidic granular,"rolling, with deep topsoil",3,p+t,"""",4.9,7.8,9.8,5,10,18
+"FOOTSLOPES, SPURS AND RIDGES",any volcanic rock type,perch-gley or oxidic granular,"rolling, with shallow topsoil",4,p+t,"""",3.4,5.4,6.8,4,7,12
+"FOOTSLOPES, SPURS AND RIDGES",any volcanic rock type,"orthic, perch-gley or gley oxidic",iron pan,5,p,"""",2.5,4.0,5.0,3,5,9
+"FOOTSLOPES, SPURS AND RIDGES","claystone, mudstone, shale",orthic brown or yellow ultic,colluvial footslopes,3,e,>,6.0,9.5,11.9,6,13,22
+"FOOTSLOPES, SPURS AND RIDGES","claystone, mudstone, shale",orthic brown or yellow ultic,regolithic footslopes,4,t,>,4.7,7.5,9.4,5,10,17
+"FOOTSLOPES, SPURS AND RIDGES","claystone, mudstone, shale",orthic brown or yellow ultic,spurs & ridges,5,s,>,5.7,9.1,11.4,6,12,21
+"FOOTSLOPES, SPURS AND RIDGES",shattered shale & sandstone,acid brown or yellow ultic,colluvial footslopes,3,e,>,6.0,9.5,11.9,6,13,22
+"FOOTSLOPES, SPURS AND RIDGES",shattered shale & sandstone,acid brown or yellow ultic,regolithic footslopes,4,t,>,4.7,7.5,9.4,5,10,17
+"FOOTSLOPES, SPURS AND RIDGES",shattered shale & sandstone,acid brown or yellow ultic,spurs & ridges,5,s,>,5.7,9.1,11.4,6,12,21
+"FOOTSLOPES, SPURS AND RIDGES",banded or massive sandstone,acid brown or yellow ultic,colluvial footslopes,3,e,<,5.0,8.0,10.0,5,11,18
+"FOOTSLOPES, SPURS AND RIDGES",banded or massive sandstone,acid brown or yellow ultic,regolithic footslopes,4,t,<,4.0,6.3,7.9,4,8,14
+"FOOTSLOPES, SPURS AND RIDGES",banded or massive sandstone,acid brown or yellow ultic,spurs & ridges,5,s,<,4.8,7.6,9.5,5,10,17
+"FOOTSLOPES, SPURS AND RIDGES",limestone,orthic or rendzic melanic,colluvial footslopes,3,e,^,6.1,9.7,12.1,6,13,22
+"FOOTSLOPES, SPURS AND RIDGES",limestone,orthic or rendzic melanic,regolithic footslopes,4,t,^,4.9,7.7,9.6,5,10,18
+"FOOTSLOPES, SPURS AND RIDGES",limestone,orthic or rendzic melanic,spurs & ridges (shallow or stony),5,s,^,5.9,9.3,11.6,6,12,21
+"FOOTSLOPES, SPURS AND RIDGES",quartzite,yellow ultic,colluvial footslopes,3,e,<,no data,no data,no data,no data,no data,no data
+"FOOTSLOPES, SPURS AND RIDGES",quartzite,yellow ultic,regolithic footslopes,4,t,<,no data,no data,no data,no data,no data,no data
+"FOOTSLOPES, SPURS AND RIDGES",quartzite,yellow ultic,spurs & ridges,5,s,<,no data,no data,no data,no data,no data,no data
+"FOOTSLOPES, SPURS AND RIDGES",greywacke,orthic brown or yellow ultic,colluvial footslopes,3,e,*,5.9,9.4,11.8,6,13,21
+"FOOTSLOPES, SPURS AND RIDGES",greywacke,orthic brown or yellow ultic,regolithic footslopes,4,t,*,4.9,7.7,9.6,5,10,18
+"FOOTSLOPES, SPURS AND RIDGES",greywacke,orthic brown or yellow ultic,spurs & ridges,5,s,*,5.7,9.1,11.4,6,12,21
+"FOOTSLOPES, SPURS AND RIDGES",greywacke,orthic brown or yellow ultic,plateaux,"5, 6",c,*,4.6,7.3,9.1,5,10,17
+"FOOTSLOPES, SPURS AND RIDGES",dolerite or andesite,orthic or oxidic granular,colluvial footslopes,3,e,#,5.7,9.0,11.3,6,12,20
+"FOOTSLOPES, SPURS AND RIDGES",dolerite or andesite,orthic or oxidic granular,regolithic footslopes,4,t,#,4.6,7.3,9.1,5,10,17
+"FOOTSLOPES, SPURS AND RIDGES",dolerite or andesite,orthic or oxidic granular,spurs & ridges,5,s,#,5.4,8.6,10.8,6,11,20
+"FOOTSLOPES, SPURS AND RIDGES",dolerite or andesite,orthic or oxidic granular,plateaux,"5, 6",c,#,4.3,6.9,8.6,5,9,16
+"FOOTSLOPES, SPURS AND RIDGES",dacite,orthic brown or yellow ultic,colluvial footslopes,3,e,,no data,no data,no data,no data,no data,no data
+"FOOTSLOPES, SPURS AND RIDGES",dacite,orthic brown or yellow ultic,regolithic footslopes,4,t,,no data,no data,no data,no data,no data,no data
+"FOOTSLOPES, SPURS AND RIDGES",dacite,orthic brown or yellow ultic,spurs & ridges,5,s,,no data,no data,no data,no data,no data,no data
+"FOOTSLOPES, SPURS AND RIDGES",dacite,orthic brown or yellow ultic,plateaux,"5, 6",c,,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,"claystone, mudstone, shale",yellow ultic,stable,5,g,>,5.2,8.2,10.3,5,11,19
+HILLSLOPES AND STEEP FACES,"claystone, mudstone, shale",yellow ultic,formerly unstable,5,g+u,>,5.5,8.7,10.9,6,12,20
+HILLSLOPES AND STEEP FACES,"claystone, mudstone, shale",yellow ultic,"unstable (slips, gullies)",6,l,>,3.9,6.2,7.8,4,8,14
+HILLSLOPES AND STEEP FACES,"claystone, mudstone, shale",yellow ultic,"unstable (earthflows, gullies)",6,g+u,>,4.3,6.9,8.6,5,9,16
+HILLSLOPES AND STEEP FACES,"claystone, mudstone, shale",orthic recent or immature ultic,unstable steep scarps,7,r,>,1.6,2.5,3.1,2,3,6
+HILLSLOPES AND STEEP FACES,"claystone, mudstone, shale",orthic recent or immature ultic,unstable broken slopes,7,g+u,>,2.7,4.3,5.4,3,6,10
+HILLSLOPES AND STEEP FACES,shattered shale & sandstone,yellow ultic,stable,5,g,>,5.2,8.2,10.3,5,11,19
+HILLSLOPES AND STEEP FACES,shattered shale & sandstone,yellow ultic,formerly unstable,5,g+u,>,5.5,8.7,10.9,6,12,20
+HILLSLOPES AND STEEP FACES,shattered shale & sandstone,yellow ultic,"unstable (slips, gullies)",6,l,>,3.9,6.2,7.8,4,8,14
+HILLSLOPES AND STEEP FACES,shattered shale & sandstone,yellow ultic,"unstable (earthflows, gullies)",6,g+u,>,4.3,6.9,8.6,5,9,16
+HILLSLOPES AND STEEP FACES,shattered shale & sandstone,orthic recent or immature ultic,unstable steep scarps,7,r,>,1.6,2.5,3.1,2,3,6
+HILLSLOPES AND STEEP FACES,shattered shale & sandstone,orthic recent or immature ultic,unstable broken slopes,7,g+u,>,2.7,4.3,5.4,3,6,10
+HILLSLOPES AND STEEP FACES,banded or massive sandstone,yellow ultic,stable,5,g,<,4.2,6.7,8.4,4,9,15
+HILLSLOPES AND STEEP FACES,banded or massive sandstone,yellow ultic,formerly unstable,5,g+u,<,4.5,7.2,9.0,5,10,16
+HILLSLOPES AND STEEP FACES,banded or massive sandstone,yellow ultic,"unstable (slips, gullies)",6,l,<,3.2,5.1,6.4,3,7,12
+HILLSLOPES AND STEEP FACES,banded or massive sandstone,yellow ultic,"unstable (earthslips, gullies)",6,g+u,<,3.6,5.7,7.1,4,8,13
+HILLSLOPES AND STEEP FACES,banded or massive sandstone,orthic recent or immature ultic,steep faces,7,l,<,2.1,3.3,4.1,2,4,8
+HILLSLOPES AND STEEP FACES,banded or massive sandstone,orthic recent or immature ultic,with shallow or stony soil,7,r,<,1.1,1.8,2.3,1,2,4
+HILLSLOPES AND STEEP FACES,limestone,orthic or rendzic melanic,stable,5,g,^,5.3,8.4,10.5,6,11,19
+HILLSLOPES AND STEEP FACES,limestone,orthic or rendzic melanic,formerly unstable,5,g+u,^,5.6,8.9,11.1,6,12,20
+HILLSLOPES AND STEEP FACES,limestone,orthic or rendzic melanic,with shallow or stony soil,6,r,^,3.8,6.0,7.5,4,8,14
+HILLSLOPES AND STEEP FACES,limestone,orthic or rendzic melanic,"unstable (slips, gullies)",6,l,^,4.0,6.4,8.0,4,9,15
+HILLSLOPES AND STEEP FACES,limestone,orthic or rendzic melanic,"unstable (earthslips, gullies)",6,g+u,^,4.5,7.1,8.9,5,9,16
+HILLSLOPES AND STEEP FACES,limestone,orthic recent or immature melanic,steep faces,7,r,^,1.6,2.5,3.1,2,3,6
+HILLSLOPES AND STEEP FACES,limestone,orthic recent or immature melanic,unstable broken slopes,7,g+u,^,2.8,4.4,5.5,3,6,10
+HILLSLOPES AND STEEP FACES,quartzite,yellow ultic,stable,5,r,<,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,quartzite,yellow ultic,"unstable (slips, gullies)",6,r+l,<,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,quartzite,orthic recent or immature ultic,steep faces,7,r+k,<,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,greywacke,orthic brown or yellow ultic,stable,5,g,*,5.2,8.2,10.3,5,11,19
+HILLSLOPES AND STEEP FACES,greywacke,orthic brown or yellow ultic,"unstable (slips, earthslips, gullies)",6,l,*,3.8,6.1,7.6,4,8,14
+HILLSLOPES AND STEEP FACES,greywacke,orthic brown or yellow ultic,with shallow or stony soil,6,r,*,3.6,5.7,7.1,4,8,13
+HILLSLOPES AND STEEP FACES,greywacke,orthic brown or yellow ultic,coastal slopes,6,r+c,*,3.6,5.7,7.1,4,8,13
+HILLSLOPES AND STEEP FACES,greywacke,orthic brown or immature ultic,steep faces,7,l,*,2.3,3.7,4.6,2,5,8
+HILLSLOPES AND STEEP FACES,greywacke,orthic brown or immature ultic,with shallow or stony soil,7,r,*,2.0,3.1,3.9,2,4,7
+HILLSLOPES AND STEEP FACES,dolerite or andesite,orthic or oxidic granular,stable,5,g,#,4.9,7.7,9.6,5,10,18
+HILLSLOPES AND STEEP FACES,dolerite or andesite,orthic or oxidic granular,"unstable (slips, earthslips, gullies)",6,l,#,3.6,5.7,7.1,4,8,13
+HILLSLOPES AND STEEP FACES,dolerite or andesite,orthic or oxidic granular,"unstable, with shallow or stony soil",6,r,#,3.3,5.3,6.6,4,7,12
+HILLSLOPES AND STEEP FACES,dolerite or andesite,orthic or oxidic granular,coastal slopes,6,r+c,#,3.3,5.3,6.6,4,7,12
+HILLSLOPES AND STEEP FACES,dolerite or andesite,oxidic brown or immature granular,steep faces,7,l,#,2.1,3.4,4.3,2,5,8
+HILLSLOPES AND STEEP FACES,dolerite or andesite,oxidic brown or immature granular,with shallow or stony soil,7,r,#,1.7,2.7,3.4,2,4,6
+HILLSLOPES AND STEEP FACES,as complex with other rocks,oxidic brown or orthic granular,stable,5,"r, u",#,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,as complex with other rocks,oxidic brown or orthic granular,"unstable (slips, earthflows, gullies)",6,g+u,#,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,as complex with other rocks,oxidic brown or orthic granular,"unstable, with shallow stony soil",6,r+l,#,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,as complex with other rocks,oxidic brown or immature granular,unstable broken slopes,7,u,#,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,dacite,orthic brown or yellow ultic,stable,5,g,,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,dacite,orthic brown or yellow ultic,"unstable (slips, earthslips, gullies)",6,l,,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,dacite,orthic brown or yellow ultic,"unstable, with shallow stony soil",6,r,,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,dacite,orthic brown or yellow ultic,coastal slopes,6,r+c,,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,dacite,orthic recent or immature ultic,steep faces,7,l,,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,dacite,orthic recent or immature ultic,with shallow or stony soil,7,r,,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,dacite,orthic recent or immature ultic,rock outcrops & bluffs,8,k,,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,dacite,orthic recent or immature ultic,coastal faces,"7, 8","r+c, k+c",,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,as complex with other rocks,orthic brown or yellow ultic,stable,5,"r, u",,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,as complex with other rocks,orthic brown or yellow ultic,"(complexed with ultic soils from sedimentary unstable (slips, earthflows, gullies)",6,g+u,,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,as complex with other rocks,orthic brown or yellow ultic,"unstable, with shallow stony soil",6,r+l,,no data,no data,no data,no data,no data,no data
+HILLSLOPES AND STEEP FACES,as complex with other rocks,orthic recent or immature ultic,unstable broken slopes,7,u,,no data,no data,no data,no data,no data,no data

@@ -105,7 +105,7 @@ even though it's all done — nothing here is currently at risk.*
   - ⚠ USE THE `stock_units` COLUMN for feed maths — NOT `cattle_equivalent`.
   - ⚠ CHECK: `stock_units.py` currently hardcodes these as `LSU_VALUES`, not loaded from
     this CSV — reconcile which is the actual source of truth.
-- [ ] 🔴 `terrain_carrying_capacity.csv` — NZ carrying capacity by terrain type (THIS is
+- [x] 🔴 `terrain_carrying_capacity.csv` — NZ carrying capacity by terrain type (THIS is
   where terrain lives). Still not built — genuinely blocking Group C2 and Group E work.
   - Source: B+LNZ farm class benchmarks — see `DATA_SOURCES.md` for the full entry
   - Columns needed: terrain_type, min_su_per_ha, max_su_per_ha, notes

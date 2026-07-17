@@ -1,0 +1,14 @@
+"# Source: T.F. Reardon (1978), 'Pasture and constraints on beef production'."
+"# Retrieved from agyields.co.nz dashboard, 2026-07-17."
+# Real measured beef-pasture data at Te Kuiti and Whatawhata research areas -
+# both inside the South_Waikato_King_Country region boundary (Te Kuiti is the
+# region's anchor town in config.py/regions.csv).
+"# Only 4 rows, annual, from 1971/1974 - too sparse to replace Cichota et al."
+"# (2014)'s 30-year APSIM simulation as the primary Waikato source, but a real,"
+"# independent, beef-specific cross-check on its magnitude."
+
+site_name,start_date,end_date,dm_yield_kgdm_ha,growth_rate_kgdm_ha_day,pub_year,authors
+Te Kuiti research area,01/01/1971,31/12/1971,4530,12.4451,1978,T. F. Reardon
+Te Kuiti research area,01/01/1971,31/12/1971,3880,10.6593,1978,T. F. Reardon
+Whatawhata research area,01/01/1974,31/12/1974,7120,19.5604,1978,T. F. Reardon
+Whatawhata research area,01/01/1974,31/12/1974,6440,17.6923,1978,T. F. Reardon

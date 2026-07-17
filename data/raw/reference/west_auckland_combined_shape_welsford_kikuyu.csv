@@ -1,0 +1,25 @@
+"# Combined real monthly shape for West_Auckland, built from two real"
+# sources with complementary gaps:
+"#  - Welsford (Auckland region, 2002-2003): Jan-May, Aug-Dec"
+"#  - Northland kikuyu (196 dataset only, EXCLUDING the flawed 228"
+#    rotation-length study - its date ranges span 4-5 months at once
+"#    and are not usable as monthly data), 2016: Apr-Sep"
+"# Overlapping months (Apr,May,Aug,Sep) averaged between the two sources."
+"# ~14 years apart (2002-03 vs 2016) - flagged as a real caveat, mainly"
+"# affecting magnitude comparability, not the seasonal shape used here."
+# Rescaled onto TR2017/020's 6900 kg DM/ha/yr magnitude - see
+# build_pasture_growth_curve.py for the rescale math.
+
+month,welsford_kgdm_ha_day,kikuyu_kgdm_ha_day,combined_raw_kgdm_ha_day,source
+1,55.33,,55.33,welsford
+2,37.0,,37.0,welsford
+3,57.0,,57.0,welsford
+4,44.86,98.39,71.62,both (averaged)
+5,36.0,101.54,68.77,both (averaged)
+6,,44.05,44.05,kikuyu
+7,,67.88,67.88,kikuyu
+8,26.5,56.34,41.42,both (averaged)
+9,19.5,45.51,32.5,both (averaged)
+10,44.62,,44.62,welsford
+11,57.29,,57.29,welsford
+12,48.0,,48.0,welsford

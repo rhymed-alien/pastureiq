@@ -1,0 +1,19 @@
+"# Source: Cichota, R., Vogeler, I., Li, F.Y., Beautrais, J. (2014)."
+# 'Deriving pasture growth patterns for Land Use Capability Classes in different
+# regions of New Zealand.' Proceedings of the NZ Grassland Association 76: 203-210.
+"# Table 2, hand-transcribed and checked against the source PDF 2026-07-17."
+"# APSIM-simulated, explicitly modelled as rotational grazing of a sheep and beef"
+"# system (cut every 3 weeks to 1250 kg DM/ha residual). Real, not a proxy."
+# Waikato LUC6 (8493) is the value used for South_Waikato_King_Country's magnitude
+# in pasture_growth_curve.csv.
+
+region,luc_class,annual_dmy_kgdm_ha_yr,expert_dmi_potential_kgdm_ha_yr,expert_dmi_top_farmer_kgdm_ha_yr,expert_dmi_avg_farmer_kgdm_ha_yr
+Waikato,2,13941,13804,12032,8983
+Waikato,4,11270,10913,9051,6917
+Waikato,6,8493,9190,7771,6372
+Canterbury,2,9241,9641,8448,6792
+Canterbury,4,7502,6166,5029,3436
+Canterbury,6,5467,3818,2801,1410
+Southland,2,11391,11760,10338,8716
+Southland,4,9540,8685,6843,5171
+Southland,6,7425,5643,3488,2630
