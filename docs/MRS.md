@@ -179,7 +179,7 @@
 *Semi-static. Download monthly. Lives in `/data/raw/market/`*
  
 ### 4.1 B+LNZ farmgate prices — primary market dataset
-- [~] 🔴 `blnz_farmgate_prices_raw.csv` — all species, all years available
+- [x] 🔴 `blnz_farmgate_prices_raw.csv` — all species, all years available
   - **STATUS (2026-06-24):** requested from B+LNZ Economic Service; reply received confirming they
     WILL supply price trend data — in progress on their side, awaited. Log access date + coverage
     in DATA_SOURCES.md on receipt; verify row counts / date range / missing values after the pull.
