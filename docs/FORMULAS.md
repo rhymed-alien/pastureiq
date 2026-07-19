@@ -59,12 +59,28 @@ blended silently:**
   is the one part of the baseline not yet upgraded to a sheep/beef source. Taranaki DTT
   Stratford is the one candidate for a genuinely trained replacement — flagged for MP3.
 
-**Adjustment — heuristic, not fitted:**
+**Adjustment — heuristic, not fitted. Redesigned 2026-07-17 from a ratio to a
+difference (see `CHANGELOG.md` for the full story — this wasn't a tuning pass, the
+original ratio formula was numerically broken):**
 ```
-water_surplus_adjustment = clip(water_surplus_today / water_surplus_monthly_norm, 0.5, 1.2)
+deviation = water_surplus_today − water_surplus_monthly_norm
+water_surplus_adjustment = clip(1 + deviation/scale × (bound − 1), 0.5, 1.2)
+# scale/bound depend on sign: dry (deviation<0) scales toward the 0.5 floor,
+# wet (deviation>0) scales toward the 1.2 ceiling — asymmetric on purpose,
+# drought suppresses growth more than excess rain boosts it.
 ```
-`WATER_SURPLUS_ADJUSTMENT_MIN/MAX` in `pasture_model.py`. Not yet calibrated against
-farmer feedback — a defensible starting assumption, not a measured figure.
+`WATER_SURPLUS_ADJUSTMENT_MIN/MAX`, `WATER_SURPLUS_DRY_SCALE_MM/WET_SCALE_MM` in
+`pasture_model.py`. Scale constants are real 5th/95th percentile deviations sampled
+across all three regions (n=5328) — grounded in data, but the MIN/MAX bounds themselves
+are still not calibrated against farmer feedback.
+
+⚠ Why this changed: the original ratio (`today/norm`) divides by
+`water_surplus_monthly_norm`, which is genuinely negative or near-zero across NZ summer
+in every target region (confirmed against real weather data — e.g. Waikato February's
+norm is -0.004 mm/day). The old formula's own safety check raised `ValueError` whenever
+norm ≤ 0, meaning the pipeline couldn't run in summer at all, not just produced an odd
+number. The difference-based version is numerically stable regardless of the norm's
+sign.
 
 **Effective hectares:**
 ```
@@ -291,7 +307,9 @@ corrected_prediction = raw_prediction − bias
 - Monthly-resolution sheep/beef shape (Group B, all three regions) — shape still borrowed
   from dairy data everywhere.
 - West Auckland landform/geology match (Group B) — reasoned, not site-verified.
-- Water-surplus adjustment calibration (Group B) — reasoned, not fitted or validated.
+- Water-surplus adjustment MIN/MAX bounds (Group B) — the formula itself is now
+  numerically sound and data-grounded (see Group B section above), but the 0.5/1.2
+  bounds are still reasoned, not fitted against real farmer-observed outcomes.
 - Group E signal variables — each needs a defined number + scale before scoring is real.
 - Group E score→action thresholds and ranking rule (E3).
 - Trade-off list (Group E) — enumerate as new ones surface; plain-English wording is MP3.

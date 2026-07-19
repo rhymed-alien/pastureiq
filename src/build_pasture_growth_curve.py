@@ -30,7 +30,7 @@ import csv
 import calendar
 
 REGION_SOURCES = {
-    "South_Waikato_King_Country": {
+    "waikato": {
         "annual_magnitude_kgdm_ha_yr": 8493,
         "magnitude_source": "Cichota et al. (2014), Table 2, LUC Class 6 (steep hill), "
                              "Waikato. Verified against source PDF 2026-07-17.",
@@ -51,7 +51,7 @@ REGION_SOURCES = {
                         "(n=4, 1971/1974), consistent order of magnitude, not used to "
                         "override Cichota.",
     },
-    "South_Taranaki_N_Whanganui": {
+    "taranaki": {
         "monthly_kgdm_ha_day": {
             1: 43.1, 2: 42.2, 3: 44.5, 4: 30.4, 5: 16.8, 6: 12.6,
             7: 23.4, 8: 51.3, 9: 69.8, 10: 68.3, 11: 59.2, 12: 46.8,
@@ -74,7 +74,7 @@ REGION_SOURCES = {
                         "flagged above. Neither adopted as primary — wrong sub-region, "
                         "single season.",
     },
-    "West_Auckland": {
+    "auckland": {
         "annual_magnitude_kgdm_ha_yr": 6900,
         "magnitude_source": "Auckland Council TR2017/020, Appendix 2 — average of the "
                              "'regolithic footslopes' semi-improved rows for 'banded or "

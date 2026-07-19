@@ -20,7 +20,7 @@ DB_PATH = ROOT / "pastureiq.sqlite"
 REGIONS = {
     "waikato":  {"name": "South Waikato / King Country",  "lat": -38.34, "lon": 175.16, "terrain": "steep_hill"},
     "taranaki": {"name": "South Taranaki / N. Whanganui",  "lat": -39.63, "lon": 174.93, "terrain": "steep_hill"},
-    "auckland": {"name": "West Auckland lifestyle blocks",  "lat": -36.90, "lon": 174.52, "terrain": "hill"},
+    "auckland": {"name": "West Auckland lifestyle blocks",  "lat": -36.90, "lon": 174.52, "terrain": "lifestyle_flat"},
 }
 
 # --- Weather settings ---
@@ -65,3 +65,68 @@ MIN_RESIDUAL_COVER_BY_TERRAIN = {
 # NOTE: lifestyle_flat has no B+LNZ farm-class equivalent at all (B+LNZ classes are hill-country
 # sheep/beef, not lifestyle blocks) — this may need a different source entirely, not just a
 # missing number. Flagged in terrain_carrying_capacity.csv build note.
+# --- STOCK_CLASS_TO_PRICE_SERIES — append this to config.py ---
+# Maps lsu_conversion_table.csv's feed-side classes to blnz_farmgate_prices.csv's
+# market-side series. These are NOT the same taxonomy — a farmer's "ewe" mob sells as
+# mutton, not as "ewe." No source document specifies this mapping directly; it's built
+# from general NZ sheep/beef market knowledge and needs your confirmation, especially
+# the entries flagged below. Draft, not verified fact — added 2026-07-17.
+#
+# CONFIDENT (standard NZ market classification, low ambiguity):
+#   - Mature/cull breeding stock (ewe, ram, ma_cow, bull_breeding) sell at cull/mutton/
+#     cow/bull prices, not premium young-stock prices.
+#   - hogget -> mutton, NOT lamb: FORMULAS.md Group D already documents the lamb->hogget
+#     age boundary as the point stock drops OUT of premium lamb pricing. This mapping is
+#     just applying that documented rule, not introducing a new judgment call.
+#
+# NEEDS YOUR CONFIRMATION (real ambiguity, flagged inline below):
+#   - wether: mapped to mutton assuming MATURE wethers. A young wether lamb would
+#     actually be lamb-priced — this class doesn't distinguish age, so if your farm
+#     mob's "wether" typically means young stock, this mapping is wrong for you.
+#   - grazing_sheep: a generic/ambiguous LSU category (also used as the interim feed
+#     proxy for "lamb" in stock_units.py — see Group A). For PRICE purposes it's
+#     mapped to mutton as the best available generic match, but it's genuinely unclear
+#     what this class represents on a real farm.
+#   - *_weaner classes (heifer_weaner, bull_weaner, steer_weaner): mapped to the
+#     closest available cattle price series, but those series are all pegged to a
+#     270-295kg weight bracket — weaners are typically well under that weight. This is
+#     a real, known weight-bracket mismatch, not a clean match. No weaner-specific
+#     price series exists in blnz_farmgate_prices.csv currently.
+#   - heifer_1.5yr, steer_1.5yr: same weight-bracket caveat, likely lighter than
+#     270-295kg — mapped to the same series for lack of a better match.
+#   - lamb: lsu_conversion_table.csv has NO standalone "lamb" row (Group A uses
+#     grazing_sheep's LSU as an interim proxy — see stock_units.py). If your farm_mob
+#     dict uses a "lamb" key for actual lambs, it needs a price mapping here even
+#     though it has no feed-side LSU row of its own. Mapped to ym_lamb.
+#
+# OUT OF SCOPE, deliberately NOT mapped:
+#   - r2_dairy_heifer, r1_dairy_heifer, dairy_cow_winter: dairy-origin grazing classes,
+#     present in lsu_conversion_table.csv because dairy stock is sometimes grazed on
+#     sheep/beef country under contract — not because PastureIQ prices dairy sales
+#     (PROJECT_SPEC scopes this tool to sheep & beef farmers). Left unmapped on
+#     purpose; get_price_signal_for_class() below returns None for these, same
+#     graceful-degrade path as any other missing price data.
+
+STOCK_CLASS_TO_PRICE_SERIES = {
+    # Sheep
+    "lamb": "ym_lamb",
+    "hogget": "all_grades_mutton",
+    "wether": "all_grades_mutton",          # ⚠ assumes mature wether
+    "ram": "all_grades_mutton",
+    "ewe": "all_grades_mutton",
+    "grazing_sheep": "all_grades_mutton",   # ⚠ generic/ambiguous class
+
+    # Beef
+    "ma_cow": "m_cow_170_195kg",
+    "heifer_2.5yr": "p_steer_heifer_270_295kg",
+    "heifer_1.5yr": "p_steer_heifer_270_295kg",     # ⚠ likely lighter than bracket
+    "heifer_weaner": "p_steer_heifer_270_295kg",    # ⚠ weaner weight well below bracket
+    "bull_weaner": "m_bull_270_295kg",              # ⚠ weaner weight well below bracket
+    "steer_weaner": "p_steer_heifer_270_295kg",     # ⚠ weaner weight well below bracket
+    "steer_1.5yr": "p_steer_heifer_270_295kg",      # ⚠ likely lighter than bracket
+    "steer_2.5yr": "p_steer_heifer_270_295kg",
+    "bull_beef_1.5yr_plus": "m_bull_270_295kg",
+    "bull_breeding": "m_bull_270_295kg",
+
+    # Dairy-origin grazing classes — deliberately unmapped, out of scope (see above)
+}

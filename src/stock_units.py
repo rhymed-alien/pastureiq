@@ -59,7 +59,7 @@ LSU_VALUES = _load_lsu_table()
 
 def calculate_total_lsu(stock_dict):
     """
-    stock_dict: {class_name: head_count, ...} e.g. {"ewe": 200, "MA_cow": 15}
+    stock_dict: {class_name: head_count, ...} e.g. {"ewe": 200, "ma_cow": 15}
     Returns total LSU (float). Raises KeyError with a clear message if a class isn't in
     LSU_VALUES, rather than silently skipping it.
     """

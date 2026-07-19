@@ -212,7 +212,7 @@ even though it's all done — nothing here is currently at risk.*
 - [x] 🔴 ~~`src/regions.py`~~ — SUPERSEDED. config.py is the code source of truth.
 
 ### 6.2 Analysis modules — Mini-project 2
-- [ ] 🟡 `src/pasture_model.py`
+- [x] 🟡 `src/pasture_model.py`
   - `estimate_pasture_growth_rate(temp, rainfall, soil_moisture, et0)` — weather to kg DM/ha/day
   - `calculate_days_of_feed(total_lsu, farm_ha, growth_rate)` — forward pasture cover estimate
   - `classify_pasture_risk(days_of_feed, season)` — returns GREEN / AMBER / RED

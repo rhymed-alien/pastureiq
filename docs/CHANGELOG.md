@@ -6,6 +6,73 @@ version notes already in those two files — nothing added beyond what's documen
 
 ---
 
+## pasture_model.py — water_surplus_adjustment formula fixed, not just recalibrated (2026-07-17)
+
+- Found while investigating why two different farm/date examples still showed identical
+  scores across all three horizons even after fixing a separate flow-balance scoring
+  cap (see entry below). The original formula was a ratio,
+  `clip(today/norm, 0.5, 1.2)`. Confirmed against real weather data (all three regions)
+  that `water_surplus_monthly_norm` is negative or near-zero across NZ summer — e.g.
+  Waikato February's real norm is -0.004 mm/day. The function's own safety check raised
+  `ValueError` whenever norm ≤ 0, which happens ~4-5 months/year in every region —
+  meaning the whole pipeline couldn't run in summer at all, not just produced a
+  misleading number.
+- Redesigned as a difference from norm (`today - norm`) instead of a ratio, scaled
+  asymmetrically to real 5th/95th percentile deviations sampled across all three
+  regions and all three horizon windows (n=5328): dry scale -3.75mm, wet scale
+  +5.22mm. Numerically stable for any norm value, including negative or zero. Confirmed
+  a real January date (negative-norm month) that would have crashed the old version now
+  runs cleanly and produces genuinely different values across horizons on its own.
+- `FORMULAS.md` Group B and Named Gaps updated to match. Full detail there.
+
+## recommendation_engine.py — flow balance normalization caps recalibrated against real data (2026-07-17)
+
+- `FLOW_BALANCE_CAP_KGDM_HA_DAY` (single symmetric cap, 15.0) replaced with two
+  separate caps grounded in the real growth curve and terrain data: deficit capped at
+  18.0, surplus capped at 65.0. A single cap was structurally wrong — real deficit tops
+  out around -17.5 kg DM/ha/day (Waikato's lowest growth month against near-max
+  stocking) while real surplus reaches +63-67 (Taranaki's September peak against light
+  stocking), a ~4-7x difference in natural range. The old cap of 15 meant surplus
+  saturated during nearly every spring month while deficit almost never did.
+- This was found while diagnosing horizon-invariant scoring (all three horizons
+  producing identical recommendations) — the cap saturation was one of two root causes,
+  the other being the water_surplus_adjustment formula bug above.
+- Test magnitudes in `recommendation_engine.py`'s own test suite recalibrated to match.
+
+## recommendation_engine.py — missing price data now downgrades confidence instead of penalizing score (2026-07-17, third scoring design this session)
+
+- Two earlier attempts at handling missing price data didn't hold up: a "rescale to
+  fill full weight" approach let missing data outscore real-but-unfavourable data; a
+  "neutral 0.5 fill-in" attempt didn't work either since price_favourable_signal/
+  price_low_signal are one-sided scales where 0.5 doesn't mean neutral. A third
+  attempt used an explicit score penalty (0.10) — mathematically provable that real
+  data always beats missing data, but the penalty magnitude itself was arbitrary and
+  indefensible when questioned directly.
+- Final design: missing price data contributes 0 to the score (same as confirmed
+  neutral/unfavourable real data — correct, neither supports the action) and instead
+  downgrades confidence one tier via `downgrade_confidence()`, reusing the same
+  mechanism Group F already has for "less to go on = less sure," rather than a second
+  penalty knob for the same idea. Trade-off: missing data and worst-case real data now
+  score identically; confidence is what differs. Proven with a dedicated test.
+
+## Horizon-invariant scoring fixed — trailing water-surplus windows per horizon (2026-07-17)
+
+- `run_recommendations.py` previously computed pasture growth/flow balance ONCE per
+  farm using a single water_surplus_today value, then reused the identical result for
+  all three horizons (7/14/28 day) — meaning horizon only affected the confidence
+  *label*, not the actual score, and ties were broken arbitrarily in favour of shorter
+  horizons.
+- Fixed with `get_trailing_water_surplus()` in `pasture_model.py`: each horizon now
+  uses a trailing window matching its own length (7-day horizon → last 7 days actual
+  conditions, 28-day → smoothed 28-day average) as a proxy for a real forecast, since
+  `get_forecast_weather()` isn't built yet (MRS.md Section 3.2). Confirmed against real
+  data this produces genuinely different — and sometimes action-changing, not just
+  score-changing — results per horizon.
+- Uncovering this required also fixing the two issues above (the scoring cap and the
+  water_surplus_adjustment formula) — both were independently capable of masking
+  horizon differences by saturating to the same ceiling regardless of the real
+  underlying input differences.
+
 ## pasture_growth_curve.csv — West Auckland shape upgraded from placeholder to real (2026-07-17)
 
 - Replaced West Auckland's flat 12-way-split placeholder with a combined real shape:
